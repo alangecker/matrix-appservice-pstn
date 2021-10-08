@@ -1,0 +1,11 @@
+version: '3.6'
+
+services:
+  freeswitch:
+    build: ./freeswitch
+    network_mode: host
+    cap_add:
+      - CAP_SYS_NICE
+    volumes:
+      - ./freeswitch/config:/etc/freeswitch:rw
+

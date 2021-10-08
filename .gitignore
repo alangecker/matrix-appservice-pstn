@@ -1,0 +1,8 @@
+node_modules
+archive
+config/config.yml
+config/registration.yml
+freeswitch/config/freeswitch.serial
+freeswitch/config/tls
+freeswitch/config/sip_profiles/external/appservice.xml
+freeswitch/config/dialplan/default/appservice.xml

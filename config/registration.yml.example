@@ -1,0 +1,14 @@
+id: pstn
+hs_token: ee7fe277bdd1dd0018e003e352d6c375f606baaa9c668276a69314a31b2095a0
+as_token: 75adc85a38ecaf103efce5e2424cbd80243e1357c0ce294872272a4c3c5366b0
+url: 'http://127.0.0.1:8010' # url to the appservice
+sender_localpart: pstn
+protocols:
+  - m.protocol.pstn
+  - im.vector.protocol.pstn
+  - im.vector.protocol.sip_virtual
+  - im.vector.protocol.sip_native
+namespaces:
+  users:
+    - exclusive: true
+      regex: '@_tel_.*'

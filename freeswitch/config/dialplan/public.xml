@@ -1,0 +1,11 @@
+<include>
+  <context name="public">
+      <extension name="sip_to_matrix">
+        <condition>
+          <action application="info"/>
+          <action application="set" data="sip_h_X-Matrix-ID=${matrix_id}"/>
+          <action application="bridge" data="{ignore_early_media=true}sofia/internal/1000%freeswitch"/>
+        </condition>
+      </extension>
+  </context>
+</include>

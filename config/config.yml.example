@@ -1,0 +1,27 @@
+country_code: "+49"
+appservice:
+  port: 8010
+  bindAddress: "0.0.0.0"
+  homeserverName: "localhost"
+  homeserverUrl: "http://localhost:8083/"
+
+
+
+# don't forget to run following commands after any change
+# $ yarn generate-fs-config
+# $ docker-compose exec freeswitch fs_cli -x reloadxml
+gateways:
+  peoplefone_in:
+    proxy: sips.peoplefone.de
+    username: USERNAME
+    password: PASSWORD
+
+  callingcredit_out:
+    proxy: sip.callingcredit.com
+    username: USERNAME
+    password: PASSWORD
+
+usermapping:
+  "@test:localhost":
+      in: peoplefone_in
+      out: callingcredit_out

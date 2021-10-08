@@ -1,0 +1,36 @@
+<profile name="internal">
+  <settings>
+    <param name="auth-calls" value="true"/>
+    <!-- Force subscription requests to require authentication -->
+    <param name="auth-subscriptions" value="true"/>
+    <param name="apply-nat-acl" value="nat.auto"/>
+    
+    <!-- <param name="apply-inbound-acl" value="allow_all"/> -->
+    <param name="apply-candidate-acl" value="allow_all"/>
+
+    <param name="debug" value="0"/>
+    <param name="sip-trace" value="yes"/>
+
+    <param name="dialplan" value="XML"/>
+    <param name="context" value="default"/>
+
+    <param name="inbound-codec-prefs" value="$${global_codec_prefs}"/>
+    <param name="outbound-codec-prefs" value="$${global_codec_prefs}"/>
+    <param name="codec-prefs" value="$${global_codec_prefs}"/>
+    
+    <param name="force-register-domain" value="freeswitch"/>
+    <param name="force-subscription-domain" value="freeswitch"/>
+    <param name="force-register-db-domain" value="freeswitch"/>
+
+    <param name="rtp-ip" value="127.0.0.1"/>
+    <param name="sip-ip" value="127.0.0.1"/>
+    <param name="ext-rtp-ip" value="auto-nat"/>
+    <param name="ext-sip-ip" value="auto-nat"/>
+    <param name="sip-port" value="$${internal_sip_port}"/>
+     <param name="ws-binding"  value="127.0.0.1:5066"/>
+
+
+    <param name="disable-transcoding" value="false"/>
+    <param name="inbound-late-negotiation" value="true"/>
+  </settings>
+</profile>
