@@ -3,6 +3,8 @@ Bridges matrix calls <-> SIP with the help of freeswitch
 
 **Note:** it is in an early state. don't use it in production!
 
+![screencast showing a call from matrix to SIP](./screencast.gif)
+
 ## Requirements
 - installed synapse
 - docker
